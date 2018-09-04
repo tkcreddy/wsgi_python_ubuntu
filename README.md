@@ -29,11 +29,13 @@ You should see the default Ubuntu Apache page.
 Now, install mod_wsgi by running the following command:
 
 sudo apt-get install libapache2-mod-wsgi
+
 Restart Apache service to get mod_wsgi to work.
 
 sudo /etc/init.d/apache2 restart
 
 Creating WSGI website
+
 To serve the python application, it is important that Apache forward certain types of requests to mod_wsgi. It is also important to create a python file that tells mod_wsgi how to handle these requests.
 
 You can do this by creating a website for WSGI that will tell Apache the location of python file and setup the file accordingly.
@@ -42,9 +44,11 @@ sudo nano /etc/apache2/conf-available/wsgi.conf
 Add the following line:
 
 WSGIScriptAlias /test_wsgi /var/www/html/test_wsgi.py
+
 Next, create a python test script which you set above.
 
 sudo nano  /var/www/html/test_wsgi.py
+
 Add the following line:
 
 def application(environ,start_response):
