@@ -67,6 +67,8 @@ Once you are done with it, you will need to enable the WSGI configuration and re
 
 sudo a2enconf wsgi
 
+sudo a2enmod wsgi
+
 sudo /etc/init.d/apache2 restart
 
 
