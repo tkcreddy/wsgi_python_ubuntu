@@ -52,19 +52,20 @@ sudo nano  /var/www/html/test_wsgi.py
 
 Add the following line:
 
+```
 def application(environ,start_response):
-    status = '200 OK'
-    html = '<html>\n' \
+   status = '200 OK'
+   html = '<html>\n' \
            '<body>\n' \
            '<div style="width: 100%; font-size: 40px; font-weight: bold; text-align: center;">\n' \
            'mod_wsgi Test Page\n' \
            '</div>\n' \
            '</body>\n' \
            '</html>\n'
-    response_header = [('Content-type','text/html')]
-    start_response(status,response_header)
-    return [html]
-
+   response_header = [('Content-type','text/html')]
+   start_response(status,response_header)
+   return [html]
+```
 
 When you are finished save and close the file.
 
