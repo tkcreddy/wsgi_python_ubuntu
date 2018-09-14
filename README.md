@@ -11,6 +11,7 @@ Getting Started
 Let's start making sure that your Ubuntu server is fully up to date. You can update your server by running the following command:
 
 sudo apt-get update -y
+
 sudo apt-get upgrade -y
 
 
